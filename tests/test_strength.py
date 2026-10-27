@@ -1,5 +1,5 @@
 import pytest
-from app.strength import score_password, strength_label
+from app.strength import score_password, strength_label, get_feedback
 
 
 def test_score_boundary_length_8():
@@ -30,3 +30,19 @@ def test_strong_password():
 def test_empty_password_is_weak():
     # edge case: empty string
     assert strength_label("") == "weak"
+
+
+def test_feedback_for_weak_password():
+    # normal behavior: every rule is missing
+    assert len(get_feedback("abc")) == 4
+
+
+def test_feedback_for_strong_password_is_empty():
+    # edge case: nothing to improve
+    assert get_feedback("Str0ng!Passw0rd") == []
+
+
+def test_feedback_non_string_raises():
+    # invalid input
+    with pytest.raises(TypeError):
+        get_feedback(None)
