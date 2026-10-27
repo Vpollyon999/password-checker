@@ -19,3 +19,13 @@ def score_password(password):
     if any(not c.isalnum() for c in password):
         score += 1
     return score
+
+
+def strength_label(password):
+    """Return 'weak', 'medium' or 'strong'."""
+    score = score_password(password)
+    if score <= 2:
+        return "weak"
+    if score == 3:
+        return "medium"
+    return "strong"
