@@ -16,7 +16,7 @@
 
 &#x20;  | Mouna Kherraf | kherrafmouna1-lab | Password length validation |
 
-&#x20;  | Wiame Hara | wiamehara | (her feature) |
+&#x20;  | Wiame Hara | wiamehara | password strength scoring |
 
 
 
