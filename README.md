@@ -21,4 +21,5 @@
 
 
 &#x20;  Project status: Development in progress.
+GitHub Pages: https://vpollyon999.github.io/password-checker/
 
